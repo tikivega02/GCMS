@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetContainer"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="20dp"
+    android:background="@drawable/bottom_sheet_background">
+
+    <TextView
+        android:id="@+id/bottom_sheet_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="start"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/edit_text_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:showDividers="middle"
+        android:divider="#000000"
+        android:visibility="gone">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttom_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#00FFFFFF"
+            android:layout_weight="1"
+            android:text="OK"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttom_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#00FFFFFF"
+            android:layout_weight="2"
+            android:text="Cancel"/>
+    </LinearLayout>
+
+
+</LinearLayout>

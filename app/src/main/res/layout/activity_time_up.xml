@@ -4,23 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TimeUp"
-    android:paddingStart="170dp"
-    android:paddingTop="170dp"
+    android:gravity="center"
+    tools:context=".TimeUpActivity"
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="TimeUp bro"
-       />
+       android:textSize="56sp"/>
 
-
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
     <Button
         android:id="@+id/stop_alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Stop"
         android:textAlignment="center"
 

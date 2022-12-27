@@ -5,33 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF">
 
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="XBox One S - 1">
 
-    <ListView
-        android:id="@+id/list_item"
-        android:background="#9B84C3"
+            <TextClock
+                android:id="@+id/wall_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="50sp"
+                android:format12Hour="hh:mm:ss a"
+                android:gravity="center" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="80dp"/>
-
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ListView
+                android:id="@+id/list_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_margin="20dp"
+                android:dividerHeight="10dp"
+                android:scrollbars="none"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom|center"
         android:contentDescription="@string/fab_detail"
-        android:layout_marginBottom="16dp"
         app:srcCompat="@android:drawable/ic_input_add" />
-
-
-    
-
-
-
 
 
 
